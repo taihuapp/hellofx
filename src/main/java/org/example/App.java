@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
@@ -12,6 +13,8 @@ import java.io.IOException;
  * JavaFX App
  */
 public class App extends Application {
+
+    private static final Logger mLogger = Logger.getLogger(App.class);
 
     private static Scene scene;
 
@@ -32,6 +35,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        mLogger.info("App");
         launch();
     }
 
